@@ -14,7 +14,7 @@ common use cases for that, including but not limited to
 
     The template creators might update the template to add new functionalities or bug
     fixes. The generated project can get updated if the template consumers want to keep
-    it to the latest version.
+    it at the latest version.
 
 The best way to update a project from its template is when all of these conditions are
 true:
@@ -25,7 +25,7 @@ true:
 1. The destination folder is versioned with Git.
 
 If that's your case, then just enter the destination folder, make sure `git status`
-shows it clean, and run:
+shows it's clean, and run:
 
 ```shell
 copier update
@@ -38,7 +38,7 @@ other Git ref you want.
 
 When updating, Copier will do its best to respect your project evolution by using the
 answers you provided when copied last time. However, sometimes it's impossible for
-Copier to know what to do with a diff code hunk. In those cases, copier handles the
+Copier to know what to do with a diff code hunk. In those cases, Copier handles the
 conflict in one of two ways, controlled with the `--conflict` option:
 
 - `--conflict rej`: Creates a separate `.rej` file for each file with conflicts. These
@@ -59,7 +59,7 @@ That's why the recommended way to prevent these mistakes is to add a
 conflict files or markers. The recommended hook configuration depends on the `conflict`
 setting you use.
 
-## Preventing Commit of Merge Conflicts
+## Preventing commit of merge conflicts
 
 If you use `--conflict inline` (the default) then you need to check for conflicts
 markers in your files:
@@ -261,7 +261,7 @@ Copier provides a subcommand `copier check-update` that can be used to check if 
 are updates to the template used to generate a project. Two workflows are recommended,
 one for manual checking, and one for checking as part of a script or other automation.
 
-### Manual Checking
+### Manual checking
 
 To manually check if the template used to generate your project has been updated, simply
 run `copier check-update` in your project directory. Sample output is provided for
@@ -283,7 +283,7 @@ New template version available.
 Current version is 1.0.0, latest version is 2.0.0a0.
 ```
 
-### Automated Checking
+### Automated checking
 
 To facilitate automated checking for updates, `copier check-update` provides two
 options:
